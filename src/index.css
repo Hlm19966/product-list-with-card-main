@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+
+:root {
+
+/*font family*/
+--ff-hat-text: "Red Hat Text", sans-serif;
+
+
+/*colors*/
+
+--Red: 14, 86%, 42%;
+--Green: 159, 69%, 38%;
+
+--Rose-50: 20, 50%, 98%;
+--Rose-100: 13, 31%, 94%;
+--Rose-300: 14, 25%, 72%;
+--Rose-400: 7, 20%, 60%;
+--Rose-500: 12, 20%, 44%;
+--Rose-900: 14, 65%, 9%;
+
+
+}
+
+
+/*css rest*/
+
+*,*::before,  *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+/*end of css rest*/
+
+/*remove animations for people who've turned them off*/
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.1ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+body {
+  font-family: var(--ff-hat-text);
+  font-size: 1rem;
+  margin-inline: auto;
+  display: flex;
+  min-height: 100vh;
+  background-color: hsla(var(--Rose-100), 0.72);
+  
+}
+
+
+
+
+
+

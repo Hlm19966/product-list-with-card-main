@@ -3,7 +3,7 @@ import './App.css'
 
 
 
-const ProductItem = ({product})=> {
+const ProductItem = ({product, cartItems, setCartItems})=> {
     return (
         <>
         <section>
@@ -11,7 +11,10 @@ const ProductItem = ({product})=> {
                 <source media='(min-width: 768px)' srcSet={product.image.desktop} />
                 <img src={product.image.mobile} alt= {'Photo of ${product.name}'} />
             </picture>
-            <AddToCardButtton product={product} />
+            <AddToCardButtton
+             product={product}
+             cartItems={cartItems}
+             setCartItems={setCartItems} />
             <article>
                <p className='dessert-category'>{product.category}</p>
                <h2>{product.name}</h2>

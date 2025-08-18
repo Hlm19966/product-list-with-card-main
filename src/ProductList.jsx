@@ -5,12 +5,15 @@ import ProductItem from './ProductItem'
 
 
 
-function ProductList() {
+function ProductList({cartItems, setCartItems}) {
     return (
         <>
             <main>
                 {products.map((product, index)=> (
-                    <ProductItem key={index} product={product}/>  
+                    <ProductItem key={index}
+                     product={product}
+                     cartItems={cartItems}
+                     setCartItems={setCartItems}/>  
                 ))}  
                 
             </main>

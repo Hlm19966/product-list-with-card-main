@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 
 
-const AddToCardButtton = ( {product} )=> {
+const AddToCardButtton = ( {product, cartItems, setCartItems} )=> {
     const[quantity, setQuantity] = useState(0);
 
     function handelAdd() {

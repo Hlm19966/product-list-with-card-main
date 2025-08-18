@@ -2,7 +2,7 @@ import './App.css'
 
 
 
-const Card = () => {
+const Card = ({cartItems, setCartItems}) => {
     return (
         <>
         <footer>

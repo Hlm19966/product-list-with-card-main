@@ -9,8 +9,8 @@ function ProductList({cartItems, setCartItems}) {
     return (
         <>
             <main>
-                {products.map((product, index)=> (
-                    <ProductItem key={index}
+                {products.map((product)=> (
+                    <ProductItem key={product.id}
                      product={product}
                      cartItems={cartItems}
                      setCartItems={setCartItems}/>  

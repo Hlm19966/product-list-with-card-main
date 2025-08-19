@@ -1,5 +1,6 @@
 [
     {
+       "id": 1,
        "image": {
             "thumbnail": "/images/image-waffle-thumbnail.jpg",
             "mobile": "/images/image-waffle-mobile.jpg",
@@ -11,6 +12,7 @@
        "price": 6.50
     },
     {
+        "id": 2,
         "image": {
             "thumbnail": "/images/image-creme-brulee-thumbnail.jpg",
             "mobile": "/images/image-creme-brulee-mobile.jpg",
@@ -22,6 +24,7 @@
         "price": 7.00
      },
      {
+        "id": 3,
         "image": {
             "thumbnail": "/images/image-macaron-thumbnail.jpg",
             "mobile": "/images/image-macaron-mobile.jpg",
@@ -33,6 +36,7 @@
         "price": 8.00
      },
      {
+        "id": 4,
         "image": {
             "thumbnail": "/images/image-tiramisu-thumbnail.jpg",
             "mobile": "/images/image-tiramisu-mobile.jpg",
@@ -44,6 +48,7 @@
         "price": 5.50
      },
      {
+        "id": 5,
         "image": {
             "thumbnail": "/images/image-baklava-thumbnail.jpg",
             "mobile": "/images/image-baklava-mobile.jpg",
@@ -55,6 +60,7 @@
         "price": 4.00
      },
      {
+        "id": 6,
         "image": {
             "thumbnail": "/images/image-meringue-thumbnail.jpg",
             "mobile": "/images/image-meringue-mobile.jpg",
@@ -66,6 +72,7 @@
         "price": 5.00
      },
      {
+        "id": 7,
         "image": {
             "thumbnail": "/images/image-cake-thumbnail.jpg",
             "mobile": "/images/image-cake-mobile.jpg",
@@ -77,6 +84,7 @@
         "price": 4.50
      },
      {
+        "id": 8,
         "image": {
             "thumbnail": "/images/image-brownie-thumbnail.jpg",
             "mobile": "/images/image-brownie-mobile.jpg",
@@ -88,6 +96,7 @@
         "price": 4.50
      },
      {
+        "id": 9,
         "image": {
             "thumbnail": "/images/image-panna-cotta-thumbnail.jpg",
             "mobile": "/images/image-panna-cotta-mobile.jpg",

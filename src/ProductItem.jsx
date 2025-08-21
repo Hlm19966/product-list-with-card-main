@@ -3,7 +3,7 @@ import './App.css'
 
 
 
-const ProductItem = ({product, cartItems, setCartItems})=> {
+const ProductItem = ({product, cartItems, setCartItems, handelAdd, handelIncrease, handelDecrease})=> {
     return (
         <>
         <section>
@@ -14,7 +14,10 @@ const ProductItem = ({product, cartItems, setCartItems})=> {
             <AddToCardButtton
              product={product}
              cartItems={cartItems}
-             setCartItems={setCartItems} />
+             setCartItems={setCartItems}
+             handelAdd={handelAdd}
+             handelIncrease={handelIncrease}
+             handelDecrease={handelDecrease} />
             <article>
                <p className='dessert-category'>{product.category}</p>
                <h2>{product.name}</h2>

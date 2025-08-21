@@ -5,7 +5,7 @@ import ProductItem from './ProductItem'
 
 
 
-function ProductList({cartItems, setCartItems}) {
+function ProductList({cartItems, setCartItems, handelAdd, handelIncrease, handelDecrease}) {
     return (
         <>
             <main>
@@ -13,7 +13,10 @@ function ProductList({cartItems, setCartItems}) {
                     <ProductItem key={product.id}
                      product={product}
                      cartItems={cartItems}
-                     setCartItems={setCartItems}/>  
+                     setCartItems={setCartItems}
+                     handelAdd={handelAdd}
+                     handelIncrease={handelIncrease}
+                     handelDecrease={handelDecrease}/>  
                 ))}  
                 
             </main>

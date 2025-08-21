@@ -8,7 +8,54 @@ import { useState } from 'react'
 
 
 const ProductPage = () => {
-    const [cartItems, setCartItems] = useState([]);
+    const [cartItem, setCartItems] = useState([]);
+
+
+    /*add to button*/ 
+    
+    const handelAdd = (product) => {
+        setCartItems((prev) => {
+            const existItem = prev.find((item) => item.id === product.id);
+
+            if (existItem) {
+                return prev.map((item) =>
+                    item.id === product.id
+                ? {...item, quantity: item.quantity + 1}
+                : item
+            );
+            } else {
+                return [...prev, {...product, quantity:1}]
+            }
+        })
+    }
+
+
+    /*increase*/ 
+
+    const handelIncrease = (productId) => {
+        setCartItems((prev) => 
+        prev.map((item) =>
+            item.id === productId
+        ? { ...item, quantity: item.quantity + 1}
+        : item
+      )
+     )
+    }
+
+
+    /*decrease*/ 
+
+    const handelDecrease = (productId) => {
+        setCartItems((prev) => 
+        prev.map((item) =>
+        item.id === productId
+        ? {...item, quantity: item.quantity - 1}
+        : item
+       )
+       .filter((item) => item.quantity > 0)
+      )
+    }
+
     return (
         <>
         <div className='product-container'>
@@ -16,8 +63,11 @@ const ProductPage = () => {
                 <h1>Desserts</h1>
             </header>
             <ProductList
-              cartItems={cartItems} 
-              setCartItems={setCartItems}/>
+              cartItems={cartItem}
+              setCartItems={setCartItems}
+              handelAdd={handelAdd}
+              handelIncrease={handelIncrease}
+              handelDecrease={handelDecrease}/>
             <Card />
         </div>
         </>

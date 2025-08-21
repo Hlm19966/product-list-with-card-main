@@ -1,23 +1,12 @@
 import './App.css'
-import { useState } from 'react'
 
 
 
 
-const AddToCardButtton = ( {product, cartItems, setCartItems} )=> {
-    const[quantity, setQuantity] = useState(0);
 
-    function handelAdd() {
-        setQuantity(1);
-    }
+const AddToCardButtton = ( {product, cartItems, setCartItems, handelAdd, handelIncrease, handelDecrease} )=> {
 
-    function handelIncrease() {
-        setQuantity(quantity + 1);
-    }
-
-    function handelDecrease() {
-        setQuantity(quantity - 1);
-    }
+   
     return (
         <>
         <div className='card-info'>

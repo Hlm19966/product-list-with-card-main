@@ -5,8 +5,6 @@ import { useState } from 'react'
 
 
 
-
-
 const ProductPage = () => {
     const [cartItem, setCartItems] = useState([]);
 
@@ -17,8 +15,8 @@ const ProductPage = () => {
         setCartItems((prev) => {
             const existItem = prev.find((item) => item.id === product.id);
 
-            if (existItem) {
-                return prev.map((item) =>
+            if(existItem) {
+            return prev.map((item) =>
                     item.id === product.id
                 ? {...item, quantity: item.quantity + 1}
                 : item
@@ -28,7 +26,6 @@ const ProductPage = () => {
             }
         })
     }
-
 
     /*increase*/ 
 
@@ -42,7 +39,7 @@ const ProductPage = () => {
      )
     }
 
-
+    
     /*decrease*/ 
 
     const handelDecrease = (productId) => {
@@ -68,7 +65,9 @@ const ProductPage = () => {
               handelAdd={handelAdd}
               handelIncrease={handelIncrease}
               handelDecrease={handelDecrease}/>
-            <Card />
+            <Card 
+              cartItems={cartItem}
+              setCartItems={setCartItems}/>
         </div>
         </>
     )

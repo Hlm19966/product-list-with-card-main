@@ -4,8 +4,11 @@ import './App.css'
 
 
 
-const AddToCardButtton = ( {product, cartItems, setCartItems, handelAdd, handelIncrease, handelDecrease} )=> {
+const AddToCardButtton = ( {product,cartItems, setCartItems, handelAdd, handelIncrease, handelDecrease} )=> {
 
+    const itemInCart = cartItems.find((item) => 
+    item.id === product.id);
+    const quantity = itemInCart ? itemInCart.quantity : 0;
    
     return (
         <>
@@ -15,7 +18,7 @@ const AddToCardButtton = ( {product, cartItems, setCartItems, handelAdd, handelI
             <button 
              className='card-btn'
              aria-label={'Add ${product.name} to cart'}
-             onClick={handelAdd}
+             onClick={() => handelAdd(product)}
             >
             <img src='/images/icon-add-to-cart.svg' alt='The image of cart'
             aria-hidden="true" className='card-image'/>
@@ -31,7 +34,7 @@ const AddToCardButtton = ( {product, cartItems, setCartItems, handelAdd, handelI
              <button
               type='button'
               className='decrease-button'
-              onClick={handelDecrease} 
+              onClick={() => handelDecrease(product.id)} 
               aria-label={`Decreas ${product.name} quantity`}
              >
                <img src='images\icon-decrement-quantity.svg' alt='decrease icon' aria-hidden="true" className='decrease-icon'/>
@@ -44,7 +47,7 @@ const AddToCardButtton = ( {product, cartItems, setCartItems, handelAdd, handelI
              <button
               type='button'
               className='increase-button'
-              onClick={handelIncrease} 
+              onClick={() => handelIncrease(product.id)} 
               aria-label={`Inecreas ${product.name} quantity`}
              >
                 <img src='images\icon-increment-quantity.svg' alt='increase icon' aria-hidden="true" className='increase-icon'/>

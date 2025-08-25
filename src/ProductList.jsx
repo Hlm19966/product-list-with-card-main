@@ -8,7 +8,7 @@ import ProductItem from './ProductItem'
 function ProductList({cartItems, setCartItems, handelAdd, handelIncrease, handelDecrease}) {
     return (
         <>
-            <main>
+            <main id='main'>
                 {products.map((product)=> (
                     <ProductItem key={product.id}
                      product={product}

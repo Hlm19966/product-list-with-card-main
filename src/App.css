@@ -12,6 +12,7 @@
   text-align: left;
 }
 
+
 h1 {
   color: hsla(var(--Rose-900));
   font-weight: 700;
@@ -151,6 +152,137 @@ h2 {
 }
 
 
+.p-result {
+  color: hsla(var(--Red));
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  width: 300px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.625rem;
+  border-bottom: 1px solid hsla(var(--Rose-400), 0.1);
+}
+
+
+.remove-btn {
+  border-radius: 50%;
+  border: none;
+  aspect-ratio: 1;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.remove-btn:hover,
+.remove-btn:focus {
+  border: 1px solid black;
+}
+
+.remove-icon {
+  margin: 0;
+  border: none;
+}
+
+.item-name {
+  color: hsla(var(--Rose-900));
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.item-quantity {
+  color: hsla(var(--Red), 0.95);
+  font-weight: 600;
+}
+
+.item-price {
+  color: hsla(var(--Rose-400));
+  font-weight: 500;
+  margin-left: 0.875rem;
+}
+
+.item-totall {
+  color: hsla(var(--Rose-500));
+  font-weight: 600;
+  margin-left: 0.625rem;
+}
+
+
+.totall {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.3rem 0 1rem 0;
+}
+
+.totall-p {
+  color: hsla(var(--Rose-900));
+  font-weight: 400;
+}
+
+.totall-amount {
+  color: hsla(var(--Rose-900));
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.brand-delivery {
+  background-color: hsla(var(--Rose-100));
+  border-radius: 0.75rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 2rem;
+}
+
+
+.brand-icon {
+  margin: 0;
+}
+
+.brand-delivery-p {
+  font-size: 0.988rem;
+  font-weight: 400;
+  color: hsla(var(--Rose-900));
+}
+
+.brand-name {
+  font-weight: 600;
+  color: hsla(var(--Rose-900));
+}
+
+
+.confirm-order {
+  display: inline-block;
+  width: 100%;
+  font-weight: 400;
+  background-color: hsla(var(--Red));
+  color: hsla(var(--Rose-50));
+  border: none;
+  border-radius: 35px;
+  padding: 0.813rem 1.563rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease
+  transform 0.2s ease-in-out;
+}
+
+.confirm-order:hover,
+.confirm-order:focus {
+  transform: scale(1.02);
+  background-color: #8e290bff;
+}
 
 
 @media only screen and (min-width: 80rem) {

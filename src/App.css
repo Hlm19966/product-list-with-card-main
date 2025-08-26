@@ -76,6 +76,19 @@ section img {
   color: hsla(var(--Rose-50));
 }
 
+
+.product-img {
+  border: 3px solid transparent;
+  transition: border-color 0.3s ease
+  transform 0.3s linear;
+
+}
+
+.product-img.active {
+  border-color: hsla(var(--Red));
+  transform: scale(1.05);
+}
+
 .decrease-button,
 .increase-button {
   border-radius: 50%;

@@ -9,7 +9,17 @@ const AddToCardButtton = ( {product,cartItems, setCartItems, handelAdd, handelIn
     const itemInCart = cartItems.find((item) => 
     item.id === product.id);
     const quantity = itemInCart ? itemInCart.quantity : 0;
-   
+
+
+    const handelKeyIncrease = (e) => {
+        if(e.key === "ArrowUp" || e.key === "ArrowRight") handelIncrease();
+    }
+
+    const handelKeydecrease = (e) => {
+        if(e.key === "ArrowDown" || e.key === "ArrowLeft") handelDecrease();
+    }
+
+
     return (
         <>
         <div className='card-info'>
@@ -28,13 +38,16 @@ const AddToCardButtton = ( {product,cartItems, setCartItems, handelAdd, handelIn
         ) : (
             <div 
              className='card-btn active'
-             role='group'
+             role='soinbutton'
+             aria-valuemin={quantity}
+             tabIndex="0"
              aria-label={`${product.name} quantity controls`}
             >
              <button
               type='button'
               className='decrease-button'
               onClick={() => handelDecrease(product.id)} 
+              onKeyDown={handelKeydecrease}
               aria-label={`Decreas ${product.name} quantity`}
              >
                <img src='images\icon-decrement-quantity.svg' alt='decrease icon' aria-hidden="true" className='decrease-icon'/>
@@ -48,6 +61,7 @@ const AddToCardButtton = ( {product,cartItems, setCartItems, handelAdd, handelIn
               type='button'
               className='increase-button'
               onClick={() => handelIncrease(product.id)} 
+              onKeyDown={handelKeyIncrease}
               aria-label={`Inecreas ${product.name} quantity`}
              >
                 <img src='images\icon-increment-quantity.svg' alt='increase icon' aria-hidden="true" className='increase-icon'/>

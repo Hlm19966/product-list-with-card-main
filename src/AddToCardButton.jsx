@@ -27,6 +27,7 @@ const AddToCardButtton = ( {product,cartItems, setCartItems, handelAdd, handelIn
            
             <button 
              className='card-btn'
+             type='button'
              aria-label={'Add ${product.name} to cart'}
              onClick={() => handelAdd(product)}
             >

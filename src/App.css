@@ -1,5 +1,5 @@
 #root {
-  max-width: 1280px;
+  max-width: 80rem;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -50,13 +50,13 @@ section img {
   font-size: 1.123rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 .card-btn.active {
   background-color: hsla(var(--Red));
   gap: 1.7rem;
-  padding: 10px 1.45rem;
+  padding: 0.625rem 1.45rem;
 }
 
 
@@ -285,8 +285,8 @@ li {
   border-radius: 35px;
   padding: 0.813rem 1.563rem;
   cursor: pointer;
-  transition: background-color 0.25s ease
-  transform 0.2s ease-in-out;
+  transition: background-color 0.25s ease,
+  transform 0.2s ease-out;
 }
 
 .confirm-order:hover,

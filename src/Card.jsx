@@ -66,6 +66,7 @@ const Card = ({cartItems, setCartItems, handelAdd}) => {
                      <button 
                      className='confirm-order'
                      aria-label='confirm your orders'
+                     type='button'
                      >
                         Confirm Order
                      </button>
